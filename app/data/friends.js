@@ -3,7 +3,7 @@
 var friendsArray = [
   {
   "name":"Carrie Bradshaw",
-  "photo":"https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
+  "photo":"/photo/carrie",
   "scores":[
       5,
       5,
@@ -19,7 +19,7 @@ var friendsArray = [
   },
   {
   "name":"Charlotte York",
-  "photo":"https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
+  "photo":"/photo/charlotte",
   "scores":[
       3,
       4,
@@ -35,7 +35,7 @@ var friendsArray = [
   },
   {
   "name":"Samantha Jones",
-  "photo":"https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
+  "photo":"/photo/samantha",
   "scores":[
       5,
       5,
@@ -51,7 +51,7 @@ var friendsArray = [
   },
   {
   "name":"Miranda Hobbes",
-  "photo":"https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
+  "photo":"/photo/miranda",
   "scores":[
       5,
       3,
@@ -67,7 +67,7 @@ var friendsArray = [
   },
   {
   "name":"Trey MacDougal",
-  "photo":"https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
+  "photo":"/photo/trey",
   "scores":[
       1,
       1,
@@ -83,7 +83,7 @@ var friendsArray = [
   },
   {
   "name":"Aidan Shaw",
-  "photo":"https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
+  "photo":"/photo/aidan",
   "scores":[
       3,
       5,
@@ -99,7 +99,7 @@ var friendsArray = [
   },
   {
   "name":"John Preston",
-  "photo":"https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
+  "photo":"/photo/john",
   "scores":[
       5,
       1,
@@ -115,7 +115,7 @@ var friendsArray = [
   },
   {
   "name":"Stanford Blatch",
-  "photo":"https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
+  "photo":"/photo/stanford",
   "scores":[
       5,
       5,
