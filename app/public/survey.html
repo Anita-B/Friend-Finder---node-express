@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder - Node Express</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Font Awesome Reference -->
+  <script src="https://use.fontawesome.com/6807919ae4.js"></script>
+  </head>
+<body>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Friend Finder <small>Fill out the survey and get matched with a friend!</small></h1>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Survey Questions</strong></h3>
+          </div>
+          <div class="panel-body">
+            <form method="POST" role="form">
+
+              <div class="form-group">
+                <label for="name">Your name (required)</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="photo">Link to Photo Image (Required)</label>
+                <input type="text" class="form-control" id="photo" required>
+              </div>
+
+              <div id="q1" class="form-group">
+                <label for="q1" class="radio_label">Do you like to have many friends?</label>
+                <label class="radio-inline">
+                  <input type="radio" value="1" name="q1radio">1 (not at all)
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="2" name="q1radio">2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="3" name="q1radio">3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="4" name="q1radio">4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="5" name="q1radio">5 (yes a lot)
+                </label>
+              </div>
+
+              <div id="q2" class="form-group">
+                <label for="q2" class="radio_label">Do you value actively building friendships?</label>
+                <label class="radio-inline">
+                  <input type="radio" value="1" name="q2radio">1 (not at all)
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="2" name="q2radio">2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="3" ame="q2radio">3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="4" name="q2radio">4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="5" name="q2radio">5 (yes a lot)
+                </label>
+              </div>
+
+              <div id="q3" class="form-group">
+                <label for="q3" class="radio_label">Do you think you’re generally a good person?</label>
+                <label class="radio-inline">
+                  <input type="radio" value="1" name="q3radio">1 (not at all)
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="2" name="q3radio">2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="3" name="q3radio">3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="4" name="q3radio">4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="5" name="q3radio">5 (yes very)
+                </label>
+              </div>
+
+              <div id="q4" class="form-group">
+                <label for="q4" class="radio_label">How optimistic are you?</label>
+                <label class="radio-inline">
+                  <input type="radio" value="1" name="q4radio">1 (not at all)
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="2" name="q4radio">2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="3" name="q4radio">3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="4" name="q4radio">4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="5" name="q4radio">5 (yes very)
+                </label>
+              </div>
+
+              <div id="q5" class="form-group">
+                <label for="q5" class="radio_label">Do you value honesty over kindness?</label>
+                <label class="radio-inline">
+                  <input type="radio" value="1" name="q5radio">1 (not at all)
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="2" name="q5radio">2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="3" name="q5radio">3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="4" name="q5radio">4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="5" name="q5radio">5 (yes a lot)
+                </label>
+              </div>
+
+              <div id="q6" class="form-group">
+                <label for="q6" class="radio_label">Do you value bravery over sharp wit?</label>
+                <label class="radio-inline">
+                  <input type="radio" value="1" name="q6radio">1 (not at all)
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="2" name="q6radio">2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="3" name="q6radio">3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="4" name="q6radio">4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="5" name="q6radio">5 (yes a lot)
+                </label>
+              </div>
+
+              <div id="q7" class="form-group">
+                <label for="q7" class="radio_label">Do you value hard work over family connections?</label>
+                <label class="radio-inline">
+                  <input type="radio" value="1" name="q7radio">1 (not at all)
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="2" name="q7radio">2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="3" name="q7radio">3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="4" name="q7radio">4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="5" name="q7radio">5 (yes a lot)
+                </label>
+              </div>
+
+              <div id="q8" class="form-group">
+                <label for="q8" class="radio_label">How important is social status to you?</label>
+                <label class="radio-inline">
+                  <input type="radio" value="1" name="q8radio">1 (not very)
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="2" name="q8radio">2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="3" name="q8radio">3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="4" name="q8radio">4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="5" name="q8radio">5 (yes very)
+                </label>
+              </div>
+
+              <div id="q9" class="form-group">
+                <label for="q9" class="radio_label">Do you value fun outings over personal discussions?</label>
+                <label class="radio-inline">
+                  <input type="radio" value="1" name="q9radio">1 (not at all)
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="2" name="q9radio">2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="3" name="q9radio">3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="4" name="q9radio">4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="5" name="q9radio">5 (yes a lot)
+                </label>
+              </div>
+
+              <div id="q10" class="form-group">
+                <label for="q10" class="radio_label">Do you value a good life over a glamorous life?</label>
+                <label class="radio-inline">
+                  <input type="radio" value="1" name="q10radio">1 (not at all)
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="2" name="q10radio">2
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="3" name="q10radio">3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="4" name="q10radio">4
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value="5" name="q10radio">5 (yes a lot)
+                </label>
+              </div>
+
+
+
+            </form>
+            <br>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal"><span><i class="fa fa-smile-o" aria-hidden="true"></i></span> Find a Friend</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="friend-name"></h4>
+      </div>
+      <div class="modal-body" id="friend-photo">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <script type="text/javascript">
+    $("#add-btn").on("click", function(event) {
+      event.preventDefault();
+
+      var scoresArray = [];
+      var flag = 1;
+      for(var i = 1, j = 0; i < 11; i++, j++){
+        scoresArray.push(parseInt($('input[name=q'+i+'radio]:checked', '#q'+i).val()));
+      }
+
+      //need to check if all fields have been filled out
+
+        var newfriend = {
+          name: $("#name").val().trim(),
+          photo: $("#photo").val().trim(),
+          scores: scoresArray
+        };
+
+        // Question: What does this code do??
+        $.post("/api/friends", newfriend)
+        .done(function(data) { 
+          $("#friend-name").html(data.name);
+          $("#friend-photo").html("<img src="+data.photo+"/>");
+          //console.log("data ", data);
+          //alert("Adding you as a friend!");
+        });
+
+
+    });
+  </script>
+
+</body>
+</html>
